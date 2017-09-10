@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chess Game</title>
+	<style>
+		#container{
+			height: 720px;
+			width: 720px;
+			//margin-top: 100px;
+			//margin-left: 600px;
+			//position: relative;
+			background-color: #f8f8f8;
+		}
+
+		.black-box{
+			background-color: #737373;
+			height: 90px;
+			width: 90px;
+			//background-image: url("images/black-img.png");
+		}
+
+		.white-box{
+			background-color: #e6ccb3;
+			height: 90px;
+			width: 90px;
+			//background-image: url("images/white-img.png");
+		}
+
+		.rook{
+			height: 90px;
+			width: 90px;
+		}
+
+		.knight{
+			height: 90px;
+			width: 90px;
+		}
+
+		.bishop{
+			height: 90px;
+			width: 90px;
+		}
+
+		.queen{
+			height: 90px;
+			width: 90px;
+		}
+
+		.king{
+			height: 90px;
+			width: 90px;
+		}
+
+		.img-responsive{
+			height: 90px;
+			width: 90px;
+		}
+
+		/*#letter-div{
+            height: 60px;
+            width: 720px;
+            margin-left: 600px;
+            margin-top: 854px;
+            background-color: red;
+            position: fixed;
+        }
+
+        #number-div{
+            height: 812px;
+            width: 60px;
+            margin-left: 540px;
+            margin-top: 102px;
+            background-color: red;
+            position: fixed;
+        }*/
+
+		.chessPiece:hover{
+			cursor: pointer;
+			box-shadow: inset 0px 0px 15px 15px rgba(243, 156, 18, .8);
+		}
+
+		.afterClickPieces{
+			cursor: pointer;
+			-webkit-box-shadow: inset 0px 0px 6px 10px rgba(231, 76, 60, .7);
+			box-shadow: inset 0px 0px 6px 10px rgba(231, 76, 60, .7);
+			background-color: red;
+		}
+
+		.selectPath{
+			-webkit-box-shadow: inset 0px 0px 6px 10px rgba(50, 174, 96, .8);
+			box-shadow: inset 0px 0px 6px 10px rgba(50, 174, 96, .8);
+		}
+
+		.pieceHover{
+			cursor: pointer;
+			-webkit-box-shadow: inset 0px 0px 15px 15px rgba(230, 126, 34, .8);
+			box-shadow: inset 0px 0px 15px 15px rgba(230, 126, 34, .8);
+			background-color: white;
+		}
+
+	</style>
+</head>
+<body>
+<div id="number-div"></div>
+<table id="container" class="table-responsive" border="20" align="center">
+	<tr>
+		<td class="white-box square" id="a8"><div class="rook chessPiece" id="black-rook1"><img src="images/black-rook.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="b8"><div class="knight chessPiece" id="black-knight1"><img src="images/black-king.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="c8"><div class="bishop chessPiece" id="black-bishop1"><img src="images/black-bishop.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="d8"><div class="queen chessPiece" id="black-queen"><img src="images/black-queen.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="e8"><div class="queen chessPiece" id="black-king"><img src="images/black-king.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="f8"><div class="bishop chessPiece" id="black-bishop2"><img src="images/black-bishop.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="g8"><div class="knight chessPiece" id="black-knight2"><img src="images/black-king.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="h8"><div class="rook chessPiece" id="black-rook2"><img src="images/black-rook.png" class="img-responsive"></div></td>
+	</tr>
+	<tr>
+		<td class="black-box square" id="a7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="b7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="c7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="d7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="e7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="f7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="g7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="h7"><div class="pown chessPiece blackpawn"><img src="images/black-pone.png" class="img-responsive"></div></td>
+	</tr>
+	<tr>
+		<td class="white-box square" id="a6"></td>
+		<td class="black-box square" id="b6"></td>
+		<td class="white-box square" id="c6"></td>
+		<td class="black-box square" id="d6"></td>
+		<td class="white-box square" id="e6"></td>
+		<td class="black-box square" id="f6"></td>
+		<td class="white-box square" id="g6"></td>
+		<td class="black-box square" id="h6"></td>
+	</tr>
+	<tr>
+		<td class="black-box square" id="a5"></td>
+		<td class="white-box square" id="b5"></td>
+		<td class="black-box square" id="c5"></td>
+		<td class="white-box square" id="d5"></td>
+		<td class="black-box square" id="e5"></td>
+		<td class="white-box square" id="f5"></td>
+		<td class="black-box square" id="g5"></td>
+		<td class="white-box square" id="h5"></td>
+	</tr>
+	<tr>
+		<td class="white-box square" id="a4"></td>
+		<td class="black-box square" id="b4"></td>
+		<td class="white-box square" id="c4"></td>
+		<td class="black-box square" id="d4"></td>
+		<td class="white-box square" id="e4"></td>
+		<td class="black-box square" id="f4"></td>
+		<td class="white-box square" id="g4"></td>
+		<td class="black-box square" id="h4"></td>
+	</tr>
+	<tr>
+		<td class="black-box square" id="a3"></td>
+		<td class="white-box square" id="b3"></td>
+		<td class="black-box square" id="c3"></td>
+		<td class="white-box square" id="d3"></td>
+		<td class="black-box square" id="e3"></td>
+		<td class="white-box square" id="f3"></td>
+		<td class="black-box square" id="g3"></td>
+		<td class="white-box square" id="h3"></td>
+	</tr>
+	<tr>
+		<td class="white-box square" id="a2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="b2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="c2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="d2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="e2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="f2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="g2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="h2"><div class="pown chessPiece whitepawn"><img src="images/white-pone.png" class="img-responsive"></div></td>
+	</tr>
+	<tr>
+		<td class="black-box square" id="a1"><div class="rook chessPiece" id="white-rook1"><img src="images/white-rook.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="b1"><div class="knight chessPiece" id="white-knight1"><img src="images/white-knight.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="c1"><div class="bishop chessPiece" id="white-bishop1"><img src="images/white-bishop.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="d1"><div class="queen chessPiece" id="white-queen"><img src="images/white-queen.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="e1"><div class="king chessPiece" id="white-king"><img src="images/white-king.ico" class="img-responsive"></div></td>
+		<td class="white-box square" id="f1"><div class="bishop chessPiece" id="white-bishop2"><img src="images/white-bishop.png" class="img-responsive"></div></td>
+		<td class="black-box square" id="g1"><div class="knight chessPiece" id="white-knight2"><img src="images/white-knight.png" class="img-responsive"></div></td>
+		<td class="white-box square" id="h1"><div class="rook chessPiece" id="white-rook2"><img src="images/white-rook.png" class="img-responsive"></div></td>
+	</tr>
+</table>
+<div id="letter-div"></div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/home-controller.js"></script>
+</body>
+</html>

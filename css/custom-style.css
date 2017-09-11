@@ -1,0 +1,106 @@
+#title {
+    height: 75px;
+    background-color: midnightblue;
+    color: #dff0d8;
+    font-style: italic;
+    font-family: "Comic Sans MS";
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.background-colour {
+    background-color: #9acfea;
+}
+
+.main-border {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #8a6d3b;
+}
+
+.div-sizes {
+    width: 118.7px !important;
+    height: 119.6px !important;
+    text-align: center;
+    float: left;
+}
+
+.white-image {
+    background-color: #7C8EBC;
+    width: 80%;
+    height: 80%;
+}
+
+.black-image {
+    background-color: #E9E9E9;
+    width: 80%;
+    height: 80%;
+}
+
+.draggable {
+    z-index: 1;
+    background-size: contain;
+    box-sizing: inherit;
+    align-self: auto;
+}
+
+.color-selected-div {
+    -webkit-box-shadow: inset 0px 0px 6px 10px #761c19;
+    box-shadow: inset 0px 0px 5px 2px #761c19;
+}
+
+.path {
+    -webkit-box-shadow: inset 0px 0px 6px 10px darkgreen;
+    box-shadow: inset 0px 0px 5px 2px darkgreen;
+}
+
+.cross {
+    -webkit-box-shadow: inset 0px 0px 6px 10px red;
+    box-shadow: inset 0px 0px 5px 2px red;
+}
+
+.inner {
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div > div > div > div > div > div > {
+    left: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.rotate {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+#board {
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-left: 255px;
+}
+
+.div-cross {
+    position: relative;
+    width: 60px;
+!important;
+    height: 60px;
+!important;
+    text-align: center;
+    float: left;
+}
+
+.team-name {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Comic Sans MS";
+    padding-top: 100px;
+}

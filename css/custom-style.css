@@ -30,14 +30,14 @@
 
 .white-box {
     background-color: #e6ccb3;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 
 .black-box {
     background-color: #737373;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
 }
 
 .score-table{
@@ -53,24 +53,19 @@
     align-self: auto;
 }
 
-.color-selected-div {
-    -webkit-box-shadow: inset 0px 0px 15px 15px #761c19;
-    box-shadow: inset 0px 0px 5px 2px #761c19;
-}
-
 .chessPiece:hover {
-    -webkit-box-shadow: inset 0px 0px 15px 15px yellow;
-    box-shadow: inset 0px 0px 12px 12px yellow;
+    -webkit-box-shadow: inset 0px 0px 10px 10px #00ffff;
+    box-shadow: inset 0px 0px 10px 10px #00ffff;
 }
 
 .path {
-    -webkit-box-shadow: inset 0px 0px 15px 15px green;
-    box-shadow: inset 0px 0px 12px 12px green;
+    -webkit-box-shadow: inset 0px 0px 10px 10px #40ff00;
+    box-shadow: inset 0px 0px 10px 10px #40ff00;
 }
 
 .cross {
-    -webkit-box-shadow: inset 0px 0px 15px 15px red;
-    box-shadow: inset 0px 0px 12px 12px red;
+    -webkit-box-shadow: inset 0px 0px 10px 10px #ff3333;
+    box-shadow: inset 0px 0px 10px 10px #ff3333;
 }
 
 .inner {
@@ -110,10 +105,10 @@
 
 .div-cross {
     position: relative;
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
     border: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #761c19;
 }
 
@@ -121,5 +116,24 @@
     text-align: center;
     font-size: 40px;
     font-family: "Comic Sans MS";
-    padding-top: 100px;
+    color: white;
+}
+
+#footer{
+    background-color: #2aabd2;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#footer-text{
+    font-size: 30px;
+    font-family: "Candara";
+    color: white;
+    text-align: center;
+}
+
+#footer-image{
+    height: 50px;
+    width: 280px;
+    margin-left: 42%;
 }

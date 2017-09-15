@@ -9,33 +9,41 @@
     margin-bottom: 20px;
 }
 
+.div-letter{
+    background-color: #8a6d3b;
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    height: 30px;
+}
+
 .background-colour {
     background-color: #9acfea;
 }
 
-.main-border {
+#board{
     border-style: solid;
     border-width: 5px;
     border-color: #8a6d3b;
 }
 
-.div-sizes {
-    width: 118.7px !important;
-    height: 119.6px !important;
-    text-align: center;
-    float: left;
+.white-box {
+    background-color: #e6ccb3;
+    width: 90px;
+    height: 90px;
 }
 
-.white-image {
-    background-color: #7C8EBC;
-    width: 80%;
-    height: 80%;
+.black-box {
+    background-color: #737373;
+    width: 90px;
+    height: 90px;
 }
 
-.black-image {
-    background-color: #E9E9E9;
-    width: 80%;
-    height: 80%;
+.score-table{
+    border: solid;
+    border-color: #761c19;
+    border-width: 5px;
 }
 
 .draggable {
@@ -46,18 +54,23 @@
 }
 
 .color-selected-div {
-    -webkit-box-shadow: inset 0px 0px 6px 10px #761c19;
+    -webkit-box-shadow: inset 0px 0px 15px 15px #761c19;
     box-shadow: inset 0px 0px 5px 2px #761c19;
 }
 
+.chessPiece:hover {
+    -webkit-box-shadow: inset 0px 0px 15px 15px yellow;
+    box-shadow: inset 0px 0px 12px 12px yellow;
+}
+
 .path {
-    -webkit-box-shadow: inset 0px 0px 6px 10px darkgreen;
-    box-shadow: inset 0px 0px 5px 2px darkgreen;
+    -webkit-box-shadow: inset 0px 0px 15px 15px green;
+    box-shadow: inset 0px 0px 12px 12px green;
 }
 
 .cross {
-    -webkit-box-shadow: inset 0px 0px 6px 10px red;
-    box-shadow: inset 0px 0px 5px 2px red;
+    -webkit-box-shadow: inset 0px 0px 15px 15px red;
+    box-shadow: inset 0px 0px 12px 12px red;
 }
 
 .inner {
@@ -66,12 +79,12 @@
     height: 100%;
 }
 
-div > div > div > div > div > div > {
+/*div > div > div > div > div > div > {
     left: 0px;
     position: absolute;
     height: 100%;
     width: 100%;
-}
+}*/
 
 .rotate {
     -moz-transform: rotate(180deg);
@@ -85,17 +98,23 @@ div > div > div > div > div > div > {
     -webkit-transition: all 1s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    padding-left: 255px;
 }
+
+/*.div-cross {
+    position: relative;
+    width: 60px !important;
+    height: 60px !important;
+    text-align: center;
+    float: left;
+}*/
 
 .div-cross {
     position: relative;
-    width: 60px;
-!important;
-    height: 60px;
-!important;
-    text-align: center;
-    float: left;
+    height: 90px;
+    width: 90px;
+    border: solid;
+    border-width: 1px;
+    border-color: #761c19;
 }
 
 .team-name {

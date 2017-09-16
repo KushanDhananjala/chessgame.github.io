@@ -9,38 +9,127 @@
     margin-bottom: 20px;
 }
 
-.div-letter{
-    background-color: #8a6d3b;
-    font-family: "Comic Sans MS";
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    height: 30px;
-}
-
-.background-colour {
-    background-color: #9acfea;
-}
-
-#board{
+#board {
     border-style: solid;
     border-width: 5px;
-    border-color: #8a6d3b;
+    border-color: #761c19;
 }
 
-.white-box {
-    background-color: #e6ccb3;
-    width: 80px;
-    height: 80px;
+@media all and (min-width: 320px) and (max-width: 1200px) {
+
+    .white-box {
+        background-color: #e6ccb3;
+        width: 75px;
+        height: 75px;
+    }
+
+    .black-box {
+        background-color: #737373;
+        width: 75px;
+        height: 75px;
+    }
+
+    .div-letter {
+        background-color: #8a6d3b;
+        font-family: "Comic Sans MS";
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        width: 75px;
+        height: 10px;
+    }
+
+    .div-number {
+        background-color: #8a6d3b;
+        padding-top: 30px;
+        font-family: "Comic Sans MS";
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        width: 10px;
+        height: 75px;
+    }
+
+    .coner-div {
+        background-color: #8a6d3b;
+        width: 10px;
+        height: 10px;
+    }
+
+    .div-cross {
+        position: relative;
+        height: 75px;
+        width: 75px;
+        border: solid;
+        border-width: 2px;
+        border-color: #761c19;
+    }
+
+    #footer-image {
+        height: 50px;
+        width: 280px;
+        margin-left: 36%;
+    }
 }
 
-.black-box {
-    background-color: #737373;
-    width: 80px;
-    height: 80px;
+@media all and (min-width: 1200px) and (max-width: 1920px) {
+
+    .white-box {
+        background-color: #e6ccb3;
+        width: 90px;
+        height: 90px;
+    }
+
+    .black-box {
+        background-color: #737373;
+        width: 90px;
+        height: 90px;
+    }
+
+    .div-letter {
+        background-color: #8a6d3b;
+        font-family: "Comic Sans MS";
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 90px;
+        height: 25px;
+    }
+
+    .div-number {
+        background-color: #8a6d3b;
+        padding-top: 35px;
+        font-family: "Comic Sans MS";
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 25px;
+        height: 90px;
+    }
+
+    .coner-div {
+        background-color: #8a6d3b;
+        width: 25px;
+        height: 25px;
+    }
+
+    .div-cross {
+        position: relative;
+        height: 90px;
+        width: 90px;
+        border: solid;
+        border-width: 2px;
+        border-color: #761c19;
+    }
+
+    #footer-image {
+        height: 50px;
+        width: 280px;
+        margin-left: 42%;
+    }
 }
 
-.score-table{
+.score-table {
     border: solid;
     border-color: #761c19;
     border-width: 5px;
@@ -74,13 +163,6 @@
     height: 100%;
 }
 
-/*div > div > div > div > div > div > {
-    left: 0px;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}*/
-
 .rotate {
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -95,45 +177,24 @@
     transition: all 0.5s ease;
 }
 
-/*.div-cross {
-    position: relative;
-    width: 60px !important;
-    height: 60px !important;
-    text-align: center;
-    float: left;
-}*/
-
-.div-cross {
-    position: relative;
-    height: 80px;
-    width: 80px;
-    border: solid;
-    border-width: 2px;
-    border-color: #761c19;
-}
-
 .team-name {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Comic Sans MS";
     color: white;
+    background-color: #761c19;
 }
 
-#footer{
-    background-color: #2aabd2;
+#footer {
+    background-color: #761c19;
+    opacity: 0.8;
     height: 100px;
     margin-top: 20px;
 }
 
-#footer-text{
+#footer-text {
     font-size: 30px;
     font-family: "Candara";
     color: white;
     text-align: center;
-}
-
-#footer-image{
-    height: 50px;
-    width: 280px;
-    margin-left: 42%;
 }

@@ -16,6 +16,10 @@ $(document).ready(function () {
 // checkmate status
 var checkMateStatus = false;
 
+// sound for moves
+var dragSound=document.getElementById("drag-audio");
+var crossSound=document.getElementById("cross-audio");
+
 // Id s of all divs
 var div_ids = [];
 // ----------------> side
@@ -57,6 +61,8 @@ $('.chessPiece').click(function () {
     var chessPieceParent = $(this).parent().attr("id");
     var player = selectPlayer(chessPiece);
 
+    dragSound.play();
+
     if (!checkMateStatus) {
         if ((checkAnyCrossForChessPiece().length > 0) && (player !== ChessObject.team)) {
             var selectedDivsParent = $(this).parent().attr("id");
@@ -93,6 +99,7 @@ function selectCrossedChessPeice(id) {
     for (var i = 0; i < chesspiece_ids.length - 1; i++) {
         if (id === chesspiece_ids[i]) {
             chesspiece_ids.splice(i, 1);
+            crossSound.play();
             if (chesspiece_ids[i].includes("w")) {
                 $("#" + id).toggleClass('rotate');
             }
@@ -126,6 +133,7 @@ $('.element').click(function () {
     var selectedDiv = $(this).attr("id");
     if (($("#" + selectedDiv).hasClass("path")) && (!selectedDiv.includes("king"))) {
         $("#" + ChessObject.chessmanId).appendTo("#" + selectedDiv);
+        dragSound.play();
         removeAllCross();
         removeAllPath();
         findTurnOfPlayer();
